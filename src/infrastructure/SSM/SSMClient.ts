@@ -48,6 +48,28 @@ export class SSMClient implements SSMClientInterface {
     return key.Parameter.Value
   }
 
+  async getMicrosoftClientId(): Promise<string> {
+    const key = await this.ssm.getParameter({
+      Name: process.env.MICROSOFT_CLIENT_ID_ARN,
+      WithDecryption: true,
+    })
+    if (!key.Parameter || !key.Parameter.Value) {
+      throw new Error('Google client id not found')
+    }
+    return key.Parameter.Value
+  }
+
+  async getMicrosoftClientSecret(): Promise<string> {
+    const key = await this.ssm.getParameter({
+      Name: process.env.MICROSOFT_CLIENT_SECRET_ARN,
+      WithDecryption: true,
+    })
+    if (!key.Parameter || !key.Parameter.Value) {
+      throw new Error('Google secret id not found')
+    }
+    return key.Parameter.Value
+  }
+
   async getOpenAIkey(): Promise<string> {
     const key = await this.ssm.getParameter({
       Name: process.env.OPENAI_API_KEY_ARN,

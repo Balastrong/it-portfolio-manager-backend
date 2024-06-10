@@ -13,6 +13,14 @@ export class DummySSMClient implements SSMClientInterface {
   getGoogleSecret(): Promise<string> {
     return Promise.resolve(process.env.GOOGLE_CLIENT_SECRET_ARN ?? '')
   }
+
+  getMicrosoftClientId(): Promise<string> {
+    return Promise.resolve(process.env.MICROSOFT_CLIENT_ID_ARN ?? '')
+  }
+  getMicrosoftClientSecret(): Promise<string> {
+    return Promise.resolve(process.env.MICROSOFT_CLIENT_SECRET_ARN ?? '')
+  }
+
   async getOpenAIkey(): Promise<string> {
     return Promise.resolve('')
   }

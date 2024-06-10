@@ -63,6 +63,16 @@ custom:
       test: ${env:GOOGLE_CLIENT_SECRET, ''}
       stage: /it-portfolio-manager/${opt:stage, 'dev'}/google-client-secret
       prod:  /it-portfolio-manager/${opt:stage, 'dev'}/google-client-secret
+    microsoftClientId:
+      dev: ${env:MICROSOFT_CLIENT_ID, ''}
+      test: ${env:MICROSOFT_CLIENT_ID, ''}
+      stage: /it-portfolio-manager/${opt:stage, 'dev'}/microsoft-client-id
+      prod: /it-portfolio-manager/${opt:stage, 'dev'}/microsoft-client-id
+    microsoftClientSecret:
+      dev: ${env:MICROSOFT_CLIENT_SECRET, ''}
+      test: ${env:MICROSOFT_CLIENT_SECRET, ''}
+      stage: /it-portfolio-manager/${opt:stage, 'dev'}/microsoft-client-secret
+      prod:  /it-portfolio-manager/${opt:stage, 'dev'}/microsoft-client-secret      
 
     apiBaseUrl: 
       dev: http://localhost:3000
@@ -113,6 +123,9 @@ functions:
       GOOGLE_CLIENT_ID_ARN: ${self:custom.variables.googleClientId.${opt:stage, 'dev'}}
       GOOGLE_CLIENT_SECRET_ARN: ${self:custom.variables.googleClientSecret.${opt:stage, 'dev'}}
       GOOGLE_CALLBACK_URL: ${self:custom.variables.apiBaseUrl.${opt:stage, 'dev'}}/${opt:stage, 'dev'}/api/auth/google/oauthCallback
+      MICROSOFT_CLIENT_ID_ARN: ${self:custom.variables.microsoftClientId.${opt:stage, 'dev'}}
+      MICROSOFT_CLIENT_SECRET_ARN: ${self:custom.variables.microsoftClientSecret.${opt:stage, 'dev'}}
+      MICROSOFT_CALLBACK_URL: ${self:custom.variables.apiBaseUrl.${opt:stage, 'dev'}}/${opt:stage, 'dev'}/api/auth/microsoft/oauthCallback
       JWT_PRIVATE_KEY_ARN: /it-portfolio-manager/${opt:stage, 'dev'}/jwt-private-key
       JWT_PUBLIC_KEY_ARN: /it-portfolio-manager/${opt:stage, 'dev'}/jwt-public-key
       FIND_TEAM_OPENAI_PROMPT: "  Given the SKILL data:
