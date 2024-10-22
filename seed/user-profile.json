@@ -9,7 +9,8 @@
     "place": "Jesi",
     "workingExperience": "APRA",
     "education": "Bachelor Degree in Computer Science",
-    "certifications": "AWS Certified Developer - Associate"
+    "certifications": "AWS Certified Developer - Associate",
+    "role": "ADMIN"
   },
   {
     "uid": "george.python@email.com",
@@ -24,11 +25,18 @@
     "name" : "test italian"
   },
   {
+    "uid": "sun@test.com",
+    "crew": "sun",
+    "company": "it",
+    "name" : "crew sun"
+  },
+  {
     "uid": "micol.ts@email.com",
     "crew": "sun",
     "company": "it",
     "name": "Micol Panetta",
-    "picture": "picture-url"
+    "picture": "picture-url",
+    "role": "TEAM_LEADER"
   },
   {
     "uid": "micol.us@email.com",
@@ -36,6 +44,12 @@
     "company": "us",
     "name": "Micol Panetta",
     "picture": "picture-url"
+  },
+  {
+    "uid": "anothercrew@email.com",
+    "crew": "another",
+    "company": "us",
+    "name": "Another Crew"
   },
   {
     "uid": "stefania.ceccacci@claranet.com",

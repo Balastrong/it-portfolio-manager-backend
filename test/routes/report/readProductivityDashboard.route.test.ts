@@ -271,6 +271,23 @@ test('read productivity report with api-key', async (t) => {
         },
         {
             "user":{
+                "email":"sun@test.com",
+                "name":"crew sun",
+                "picture":"",
+                "crew": "sun",
+                "serviceLine": "Developer",
+            },
+            "workedHours":0,
+            "totalTracked":{
+                "billable":0,
+                "non-billable":0,
+                "slack-time":0,
+                "absence":0
+            },
+            "totalProductivity":0
+        },
+        {
+            "user":{
                 "email":"testIt@test.com",
                 "name":"test italian",
                 "picture":"",
